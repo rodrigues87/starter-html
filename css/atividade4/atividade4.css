@@ -1,0 +1,13 @@
+.conteudo{
+    background: green;
+    padding: 10px;
+}
+.sub-conteudo{
+    background: red;
+    padding: 20px;
+}
+.texto{
+    background: black;
+    color: white;
+    padding: 30px;
+}

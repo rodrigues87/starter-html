@@ -1,0 +1,16 @@
+body, h1, h2{
+    background: cadetblue;
+}
+
+.terceiro-texto{
+    color: blue;
+}
+
+
+#segundo-texto{
+    color: coral;
+}
+
+div div {
+    color: blueviolet;
+}

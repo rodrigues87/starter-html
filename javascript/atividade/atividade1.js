@@ -24,7 +24,7 @@ function verificarMaiorIdade(idadePessoa) {
 }
 
 function validarIdade(idadePessoa) {
-    if(idadePessoa === 0 ){
+    if(idadePessoa <= 0 ){
         throw "Esta não é uma idade válida";
     }
 }

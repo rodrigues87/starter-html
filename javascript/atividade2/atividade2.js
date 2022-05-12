@@ -15,5 +15,5 @@ function verificarIdade(){
         this.objetoResultadoNegativo.textContent = "Esta pessoa não é maior de idade"
 
     }
-
 }
+

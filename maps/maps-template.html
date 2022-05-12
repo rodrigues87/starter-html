@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css" type="text/css">
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    .map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+  <title>OpenLayers example</title>
+</head>
+<body>
+<h2>My Map</h2>
+<div id="map" class="map">
+  <div id="popup"></div>
+</div>
+<script type="text/javascript">
+  const iconFeature = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([-40.349088160790124, -20.3144245944463])),
+    name: 'Somewhere near Nottingham',
+  });
+
+  const map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM(),
+      }),
+      new ol.layer.Vector({
+        source: new ol.source.Vector({
+          features: [iconFeature]
+        }),
+        style: new ol.style.Style({
+          image: new ol.style.Icon({
+            anchor: [0.5, 46],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'pixels',
+            src: 'https://openlayers.org/en/latest/examples/data/icon.png'
+          })
+        })
+      }),
+
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([-40.349088160790124, -20.3144245944463]),
+      zoom: 12
+    })
+  });
+</script>
+</body>
+</html>
